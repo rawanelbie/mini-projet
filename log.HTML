@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topnav">
+    <a href="homevoyage.html">Home</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="reservation.html">Reservation</a>
+    <a class="active" href="log.html">Login</a>
+</div>
+
+<div class="container">
+    <div class="form-container sign-in-container">
+        <form action="home.html" onsubmit="return login()">
+            <h1>Sign In</h1>
+            <label for="in3">UserName:</label>
+            <input type="text" id="in3" placeholder="Enter your username" required>
+            <label for="in4">Password:</label>
+            <input type="password" id="in4" placeholder="Enter your password" required>
+            <span id="s2" style="color: red;"></span>
+            <br>
+            <input type="checkbox" onclick="showPass()"> Show password
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div class="form-container sign-up-container">
+        <form id="signUpForm" onsubmit="return addUser()">
+            <h1>Create Account</h1>
+            <input type="text" id="in1" placeholder="Enter your name" required>
+            <input type="password" id="in2" placeholder="Enter a password" required>
+            <span id="s1" style="color: rgb(32, 5, 86);"></span>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="div1">
+    <button onclick="show()">Show users in table</button><br><br>
+    <table border="2px" id="table1">
+        <tr><th>Nom Complet</th><th>Password</th></tr>
+    </table>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

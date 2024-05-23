@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="test.css">
+        <script>
+                  function add(){
+
+var userNameIn1 = document.getElementById('in1').value;
+var passwordIn2 = document.getElementById('in2').value;
+
+if(passwordIn2.length<8){
+    document.getElementById('s1').innerHTML = "password must contains 8 characters";
+            }else{
+                    var user = {};
+                    user.username = userNameIn1;
+                    user.password = passwordIn2;
+                    users.push(user); 
+              
+                    console.log(users)
+            }
+         }
+
+        </script>
+    </head>
+    <body>
+        <div id="div0">
+            <input type="text" id="in1" placeholder="Enter you name"><br>
+            <input type="text" id="in2" placeholder="Enter a password"><br>
+            <span id="s1" style="color: red;"></span><br>
+            <button onclick="add()">Add user</button>
+        </div>
+
+        <div id="div1">
+            <button onclick="show()">Show users in table</button><br><br>
+            <table border="2px" id="table" >
+                    <tr><th>Nom Complet</th><th>Password</th></tr>
+            </table>
+        </div>
+
+        <div id="div2">
+            <form action="page5.html" onsubmit="return login()">
+                <label for="in3">UserName:</label>
+                <input type="text" id="in3"><br>
+                <label for="in4">Password:</label>
+                <input type="password" id="in4"><br>
+                <span id="s2" style="color: red;"></span><br>
+                <input type="checkbox" onclick="showPass()"> Show password
+                <input type="submit" value="login">
+            </form>
+        </div>
+    </body>
+</html>
+<style>
+    div{
+    border: 3px solid green;
+    width: 200px;
+    margin-left: 60px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+</style>

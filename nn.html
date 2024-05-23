@@ -1,0 +1,17 @@
+<body >
+     <button id="b1" onclick="affiche()">Show value in paragraph</button> 
+        <p id="p1"></p> 
+    
+        <script>
+            function affiche(){
+                document.getElementById('p1').innerHTML='hi amine';
+            }
+            function masquer(){
+                document.getElementById('p1').innerHTML=' ';
+            }
+            let b = document.getElementById('b1');
+            b.addEventListener("dblclick",affiche);
+            b.addEventListener("mouseleave",masquer);
+        </script>
+        </body>
+    
